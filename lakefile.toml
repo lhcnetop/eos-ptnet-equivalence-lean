@@ -1,0 +1,30 @@
+name = "eos_ptnet_equivalence"
+version = "0.1.0"
+keywords = ["petri-nets", "object-petri-nets", "bisimulation", "cslib"]
+defaultTargets = ["PetriNet", "EOS", "PetriNetTests"]
+
+[leanOptions]
+pp.unicode.fun = true
+relaxedAutoImplicit = false
+weak.linter.mathlibStandardSet = true
+maxSynthPendingDepth = 3
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "29af5245bafea7d69fdca69591450f60b916ed71"
+
+[[require]]
+name = "cslib"
+scope = "leanprover"
+rev = "a441db604430aba5dc210c7f4af341a8c3cc3b6e"
+
+[[lean_lib]]
+name = "PetriNet"
+
+[[lean_lib]]
+name = "EOS"
+
+[[lean_lib]]
+name = "PetriNetTests"
+leanOptions = {weak.linter.style.header = false}
